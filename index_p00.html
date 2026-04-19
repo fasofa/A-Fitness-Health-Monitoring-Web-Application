@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- ประกาศเอกสารเป็น HTML5 เพื่อให้เบราว์เซอร์แสดงผลแบบสมัยใหม่ -->
+
+<html lang="en">
+<!-- เปิดแท็ก html และกำหนดภาษาเป็นอังกฤษ (en) -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- กำหนดชุดอักขระเป็น UTF-8 เพื่อให้รองรับภาษาไทยและอักขระอื่นๆ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- กำหนดการแสดงผลบนอุปกรณ์พกพา ให้ขนาด viewport เท่ากับความกว้างของอุปกรณ์และไม่ซูมอัตโนมัติ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- เตรียมการเชื่อมต่อไปยัง Google Fonts เพื่อให้โหลดเร็วขึ้น -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- เตรียมเชื่อมต่อไปยังโดเมน fonts.gstatic.com ด้วย crossorigin -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Playwrite+NZ+Basic:wght@100..400&family=Press+Start+2P&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- นำเข้าแบบอักษรจาก Google Fonts ที่ใช้ในหน้าเว็บ -->
+
+    <title>Form Wave Animation</title>
+    <!-- ชื่อแท็บของหน้าเว็บ -->
+
+    <link rel="stylesheet" href="style_p00.css">
+    <!-- ลิงก์ไปยังไฟล์ CSS ภายนอกสำหรับสไตล์ทั้งหมด -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- กล่องหลักสำหรับแผงฟอร์ม -->
+        <h1>Please Login</h1>
+        <!-- หัวเรื่องของฟอร์ม -->
+
+        <form id="login-form">
+            <!-- ฟอร์มล็อกอินที่มี id เพื่อใช้เลือกจาก JavaScript -->
+
+            <div class="form-control">
+                <!-- กลุ่มควบคุมสำหรับฟิลด์ Username -->
+                <input type="text" name="username" required>
+                <!-- ช่องกรอกข้อความสำหรับชื่อผู้ใช้ กำหนดให้ต้องกรอก -->
+                <label>Username</label>
+                <!-- ป้ายข้อความสำหรับช่องกรอกข้อมูล -->
+            </div>
+
+            <div class="form-control">
+                <!-- กลุ่มควบคุมสำหรับฟิลด์ Password -->
+                <input type="password" name="password" required>
+                <!-- ช่องกรอกรหัสผ่าน กำหนดให้ต้องกรอก และปกปิดตัวอักษร -->
+                <label>Password</label>
+                <!-- ป้ายข้อความสำหรับช่องรหัสผ่าน -->
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            <!-- ปุ่มส่งฟอร์ม ล็อกอิน -->
+
+            <p id="login-message" class="text"></p>
+            <!-- ย่อหน้าสำหรับแสดงข้อความสถานะการล็อกอิน เช่น ข้อผิดพลาดหรือสำเร็จ -->
+
+            <p class="text">Don't have an account? <a href="#">Register</a></p>
+            <!-- ข้อความลิงก์สมัครบัญชีแบบตัวอย่าง -->
+        </form>
+    </div>
+
+    <script type="module" src="script_p00.js"></script>
+    <!-- โหลดไฟล์ JavaScript แบบ ES module -->
+</body>
+
+</html>

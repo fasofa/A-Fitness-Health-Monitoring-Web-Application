@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    /* ตั้งค่า box-sizing ให้ทุกองค์ประกอบรวม padding/border ในขนาดของกล่อง */
+}
+
+body {
+    background-color: #101825;
+    /* พื้นหลังของหน้าเว็บเป็นสีน้ำเงินอมเขียว */
+    color: white;
+    /* สีตัวอักษรเริ่มต้นเป็นสีขาว */
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดแนวเนื้อหา */
+    flex-direction: column;
+    /* เรียงเนื้อหาในแนวตั้ง */
+    align-items: center;
+    /* จัดกึ่งกลางแนวนอน */
+    justify-content: center;
+    /* จัดกึ่งกลางแนวตั้ง */
+    height: 100vh;
+    /* ความสูงของ body เท่ากับความสูงหน้าจอ */
+    overflow: hidden;
+    /* ซ่อนสเกลบาร์ถ้ามี */
+    margin: 0;
+    /* เอาช่องว่างรอบนอกทั้งหมดออก */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* พื้นหลังกล่องใสโปร่งสีดำเล็กน้อย */
+    padding: 20px 40px;
+    /* เว้นระยะด้านในแนวตั้ง 20px และแนวนอน 40px */
+    border-radius: 5px;
+    /* มุมโค้งมน */
+}
+
+.btn {
+    cursor: pointer;
+    /* เปลี่ยนเคอร์เซอร์เมื่อโฮเวอร์ เพื่อบอกว่าคลิกได้ */
+    display: inline-block;
+    width: 100%;
+    /* ปุ่มเต็มความกว้างของคอนเทนเนอร์ */
+    background: #f59e0b;
+    /* พื้นหลังปุ่มเป็นสีฟ้าอ่อน */
+    padding: 15px;
+    /* เว้นระยะด้านในของปุ่ม */
+    font-size: 16px;
+    /* ขนาดตัวอักษรของปุ่ม */
+    border: 0;
+    /* ไม่มีเส้นขอบ */
+    border-radius: 5px;
+    /* มุมปุ่มโค้งมน */
+}
+
+.btn:focus {
+    outline: 0;
+    /* เอาเส้นขอบโฟกัสของเบราว์เซอร์ออก */
+}
+
+.btn:active {
+    transform: scale(0.98);
+    /* เมื่อกดปุ่ม จะย่อเล็กนิดหน่อย เพื่อให้ดูมีแอนิเมชัน */
+}
+
+.text {
+    margin-top: 30px;
+    /* เว้นระยะห่างด้านบนของข้อความ */
+}
+
+.container h1 {
+    text-align: center;
+    /* จัดข้อความหัวเรื่องกึ่งกลาง */
+    margin-bottom: 30px;
+    /* เว้นระยะด้านล่างหัวเรื่อง */
+    color: #f59e0b;
+    /* สีของหัวเรื่องเป็นสีส้ม */
+    font-family: 'Press Start 2P', system-ui;
+    /* ใช้ฟอนต์ Press Start 2P หรือถ้าไม่มีให้ใช้ฟอนต์ระบบ */
+    font-size: 1.5rem;
+}
+
+.container a {
+    text-decoration: none;
+    /* เอาเส้นใต้ของลิงก์ออก */
+    color: #f59e0b;
+    /* สีของลิงก์เป็นสีส้ม */
+}
+
+.form-control {
+    position: relative;
+    /* กำหนดตำแหน่งแม่เพื่อให้ label ตำแหน่งสัมพัทธ์ได้ */
+    margin: 20px 0 40px;
+    /* เว้นระยะด้านบน 20px ด้านล่าง 40px */
+    width: 300px;
+    /* กำหนดความกว้างฟอร์มคอนโทรล */
+}
+
+.form-control input {
+    background-color: transparent;
+    /* พื้นหลังโปร่งใส */
+    border: 0;
+    /* เอาเส้นขอบทั้งหมดออก */
+    border-bottom: 2px #fff solid;
+    /* ใส่เส้นขอบล่างสีขาว */
+    display: block;
+    width: 100%;
+    /* ให้ช่องกรอกเต็มความกว้างของกล่อง */
+    padding: 18px;
+    /* เว้นระยะด้านใน */
+    color: #fff;
+    /* สีข้อความในช่องกรอกเป็นขาว */
+}
+
+.form-control input:focus, .form-control input:valid {
+    outline: 0;
+    /* เอาโฟกัสสีน้ำเงินของเบราว์เซอร์ออกเมื่อโฟกัส */
+    border-bottom-color: #f59e0b;
+    /* เปลี่ยนสีเส้นขอบล่างเป็นสีส้มเมื่อโฟกัสหรือมีค่า */
+}
+
+.form-control label {
+    position: absolute;
+    /* วาง label แบบ absolute ภายในกล่อง .form-control */
+    top: 15px;
+    /* ระยะห่างจากด้านบน 15px */
+    left: 0;
+    /* อยู่ชิดซ้าย */
+}
+
+.form-control label span {
+    display: inline-block;
+    /* ทำให้แต่ละ <span> เป็นบล็อกย่อย เพื่อสามารถแปลงตำแหน่งได้ */
+    font-size: 18px;
+    /* ขนาดตัวอักษรของ label */
+    min-width: 2px;
+    /* ตั้งค่าความกว้างขั้นต่ำเพื่อให้ตัวอักษรแต่ละตัวจัดวางได้ */
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* กำหนดการเคลื่อนไหวแบบนุ่มนวลเฉพาะตัว */
+}
+
+.form-control input:focus + label span, .form-control input:valid + label span {
+    color: #f59e0b;
+    /* เปลี่ยนสีตัวอักษร label เมื่อ input โฟกัสหรือมีค่า */
+    transform: translateY(-30px);
+    /* ย้าย label ขึ้นเพื่อสร้างเอฟเฟกต์ลอย */
+}

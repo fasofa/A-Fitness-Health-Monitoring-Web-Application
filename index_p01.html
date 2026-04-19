@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- ประกาศเอกสารเป็น HTML5 -->
+
+<html lang="en">
+<!-- เปิดแท็ก html และกำหนดภาษาเป็นอังกฤษ -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ทำให้แสดงผลบนมือถือได้ถูกต้อง โดยปรับ viewport ให้กว้างเท่าหน้าจอจริง -->
+
+    <title>Document</title>
+    <!-- ชื่อหน้าเว็บที่จะแสดงบนแท็บเบราว์เซอร์ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- เตรียมการเชื่อมต่อไปยัง Google Fonts เพื่อให้โหลดเร็วขึ้น -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- เตรียมเชื่อมต่อไปยังโดเมน fonts.gstatic.com ด้วย crossorigin -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Playwrite+NZ+Basic:wght@100..400&family=Press+Start+2P&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- นำเข้าแบบอักษรจาก Google Fonts ที่ใช้ในหน้าเว็บ -->
+
+    <link rel="stylesheet" href="style_p01.css">
+    <!-- ลิงก์ไปยังไฟล์ CSS ที่ใช้สไตล์หน้า index_p01 -->
+</head>
+
+<body>
+
+<div class="grid-container">
+    <!-- คอนเทนเนอร์หลักของ layout แบบ grid -->
+
+    <div class="grid-item item-1">
+    <!-- Grid item แรก เป็นเมนูข้างซ้าย -->
+    <div class="nav-panel">
+        <!-- แผงเมนู -->
+        <h3>Menu</h3>
+        <!-- หัวข้อเมนู -->
+
+        <a href="index_p01.html" class="nav-btn">Home</a>
+        <!-- ลิงก์ไปหน้า Home -->
+
+        <a href="index_p02.html" class="nav-btn">Todo-List</a>
+        <!-- ลิงก์ไปหน้า Todo-List -->
+
+        <a href="index_p03.html" class="nav-btn">Weight-Calculate.</a>
+        <!-- ลิงก์ไปหน้า Weight-Calculate -->
+
+        <!-- <a href="#" class="nav-btn">ออกกำลังกาย</a> -->
+        <!-- ลิงก์ตัวอย่างที่ถูกคอมเมนต์ไว้ -->
+
+        <div class="username-in-panel">Username: <span id="username-display">YourName</span></div>
+        <!-- แสดงชื่อผู้ใช้ที่ล็อกอิน โดยเริ่มต้นเป็น YourName -->
+    </div>
+    </div>
+
+    <div class="grid-item item-2">
+        <div class="container">
+        <!-- คอนเทนเนอร์ย่อยสำหรับ panel ภาพและคำอธิบาย -->
+
+        <div class="panel active" style="background-image: url('https://www.dmoose.com/cdn/shop/articles/1_03ca4b8f-2a60-490e-ade5-2d7ad38bb30d.jpg?v=1647876023');">
+            <!-- Panel แรก มี class active เป็นสถานะเริ่มต้น และใช้ background-image จาก URL -->
+            <h3>Lat Pulldown</h3>
+            <!-- ชื่อท่าออกกำลังกาย -->
+            <h2>This is a very popular exercise for working the back muscles, specifically targeting the upper back muscles, or latissimus dorsi, which is the largest muscle in the upper back. </h2>
+            <!-- คำอธิบายท่า Lat Pulldown -->
+        </div>
+
+        <div class="panel" style="background-image: url('https://videocdn.cdnpk.net/videos/47f392e6-5ebf-55fd-8718-349c142fc69a/horizontal/thumbnails/large.jpg?semt=ais_hybrid&item_id=2877816&w=740&q=80');">
+            <!-- Panel ที่สอง ใช้ภาพพื้นหลังจาก URL -->
+            <h3>Deadlift </h3>
+            <!-- ชื่อท่า Deadlift -->
+            <h2>The deadlift is a very effective exercise because it works all the back muscles and helps to tone the hips and thighs. Start by standing in front of the barbell with your feet hip-width apart. Lower your body to grip the bar, keeping your hands shoulder-width apart. Keep your back straight and stand upright, using the power from your legs and hips to lift the bar. Finally, slowly lower the bar to the floor by squatting and leaning forward.</h2>
+            <!-- คำอธิบายท่า Deadlift -->
+        </div>
+
+        <div class="panel" style="background-image: url('https://t4.ftcdn.net/jpg/06/03/79/33/360_F_603793384_0t7iw0tiW0BpwUcIPEL3gASA9vWYGkah.jpg');">
+            <!-- Panel ที่สาม ใช้ภาพพื้นหลังจาก URL -->
+            <h3>Seated Cable Row</h3>
+            <!-- ชื่อท่า Seated Cable Row -->
+            <h2>This exercise works the upper body muscles, especially the latissimus dorsi, the largest muscle in the upper back, and it can also safely build other muscle groups.</h2>
+            <!-- คำอธิบายท่า Seated Cable Row -->
+        </div>
+
+        <div class="panel" style="background-image: url('https://media.gettyimages.com/id/1337851118/video/4k-video-footage-of-a-young-man-lifting-doing-pull-ups-at-a-gym.jpg?s=640x640&k=20&c=YyAHJtyaDYVGPZEBKOS2l8adCHfMZ8HUa4HckYXW-KA=');">
+            <!-- Panel ที่สี่ ใช้ภาพพื้นหลังจาก URL -->
+            <h3>Pull up</h3>
+            <!-- ชื่อท่า Pull up -->
+            <h2>Pull-ups are an exercise that effectively strengthens the upper back muscles, especially the latissimus dorsi, which is responsible for the extension and flexion of the lumbar spine.</h2>
+            <!-- คำอธิบายท่า Pull up -->
+        </div>
+
+        <div class="panel" style="background-image: url('https://www.shutterstock.com/shutterstock/videos/1101328985/thumb/7.jpg?ip=x480');">
+            <!-- Panel ที่ห้า ใช้ภาพพื้นหลังจาก URL -->
+            <h3>Dumbbell Row </h3>
+            <!-- ชื่อท่า Dumbbell Row -->
+            <h2>Dumbbell rows can develop the upper and middle back muscles, especially the latissimus dorsi, a large, flat muscle that aids in the extension and flexion of the lumbar spine, and the rhomboids, important muscles that help with shoulder and scapular movement.</h2>
+            <!-- คำอธิบายท่า Dumbbell Row -->
+        </div>
+
+    </div>
+    </div>
+
+    <div class="grid-item item-3">
+    <!-- Grid item ที่สาม เป็นกล่อง note -->
+    <div class="note-exercise">
+        <h3>Exercise Note</h3>
+        <!-- หัวข้อ Note -->
+        <ul>
+            <li> ✔ Stretch your muscles for 5-10 minutes before and after exercising.</li>
+            <li> ✔ Choose an activity you enjoy, such as walking, running, swimming, or cycling.</li>
+            <li> ✔ Aim to exercise at least 3-5 days a week.</li>
+            <li> ✔ Get enough rest and drink plenty of water.</li>
+            <li> ✔ Start with light intensity and gradually increase the difficulty.</li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="grid-item item-4">
+        <div class="stats-summary-container">
+            <h3>Summary</h3>
+            <!-- หัวข้อสรุป -->
+            <div class="stats-summary-body">
+                <div id="todo-stats-summary" class="stats-card stats-card-left"></div>
+                <!-- ช่องสรุปสถิติ Todo -->
+                <div id="weight-stats-summary" class="stats-card stats-card-right"></div>
+                <!-- ช่องสรุปสถิติ Weight -->
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-item item-5">
+        <!-- ช่องแสดงวันที่และเวลา -->
+        <div class="w_item-5_time">CALENDAR</div> 
+        <br>
+        <div id="date"></div>
+        <!-- วันที่ปัจจุบัน -->
+        <div id="time"></div>
+        <!-- เวลาปัจจุบัน -->
+    </div>
+</div>
+
+    <script src="script_p01.js"></script>
+    <!-- โหลดไฟล์ JavaScript สำหรับหน้า index_p01 -->
+</body>
+</html>

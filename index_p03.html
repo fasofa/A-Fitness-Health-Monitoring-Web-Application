@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- ประกาศเอกสารเป็น HTML5 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- กำหนดการเข้ารหัส UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport สำหรับมือถือ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- เตรียมเชื่อมต่อ Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Playwrite+NZ+Basic:wght@100..400&family=Press+Start+2P&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- โหลดฟอนต์ที่ใช้ในหน้า -->
+
+    <link rel="stylesheet" href="style_p03.css">
+    <!-- สไตล์สำหรับหน้า Weight-Calculate -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- โหลด Chart.js จาก CDN เพื่อวาดกราฟน้ำหนัก -->
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="grid-item item-1">
+            <div class="nav-panel">
+                <!-- เมนูด้านซ้าย -->
+                <h3>Menu</h3>
+                <a href="index_p01.html" class="nav-btn">Home</a>
+                <a href="index_p02.html" class="nav-btn">Todo-List</a>
+                <a href="index_p03.html" class="nav-btn">Weight-Calculate.</a>
+                <!-- <a href="#" class="nav-btn">ออกกำลังกาย</a> -->
+                <div class="username-in-panel">Username: <span id="username-display">YourName</span></div>
+                <!-- แสดงชื่อผู้ใช้ -->
+            </div>
+        </div>
+        <div class="grid-item item-2">
+            <canvas id="weight-chart"></canvas>
+            <!-- แสดงกราฟน้ำหนัก -->
+        </div>
+        <div class="grid-item item-3">
+            <div class="history-container">
+                <h3>Weight History</h3>
+                <div id="weight-history"></div>
+                <!-- แสดงประวัติน้ำหนัก -->
+            </div>
+        </div>
+        <div class="grid-item item-4">
+            <div class="weight-input-container">
+                <h2>Record weight</h2>
+                <form id="weight-form">
+                    <label for="weight-date">Date:</label>
+                    <input type="date" id="weight-date" name="weight-date" required>
+                    <!-- เลือกวันที่ของข้อมูลน้ำหนัก -->
+                    <label for="weight-value">Weight (kg):</label>
+                    <input type="number" id="weight-value" name="weight-value" step="0.1" min="0" required>
+                    <!-- กรอกน้ำหนักเป็นกิโลกรัม -->
+                    <button type="submit">Save</button>
+                    <!-- ปุ่มบันทึกน้ำหนัก -->
+                </form>
+                <button id="clear-weight-stats" class="clear-stats-btn" type="button">clear</button>
+                <!-- ปุ่มล้างข้อมูลน้ำหนัก -->
+            </div>
+        </div>
+        <div class="grid-item item-6">
+            <div class="note-exercise">
+                <h3>Dietary guidelines</h3>
+                    <ul>
+                        <li> ✔ Do not skip meals, as this will slow down your metabolism.</li>
+                        <li> ✔ Reduce carbohydrate and sweet intake, especially sugar and sugary snacks.</li>
+                        <li> ✔ Eat breakfast regularly to control hunger throughout the day.</li>
+                        <li> ✔ Increase your intake of protein and fiber, such as fish, chicken, tofu, and fruits and vegetables.</li>
+                        <li> ✔ Read nutrition labels and choose foods that are low in calories and fat.</li>
+                        <li> ✔ Drink enough water, at least 1.5–2 liters per day.</li>
+                        <li> ✔ Chew your food slowly to give your brain 15 minutes to register fullness.</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="grid-item item-5">
+            <div class="w_item-5_time">CALENDAR</div> 
+            <br>
+            <div id="date"></div>
+            <!-- วันที่ปัจจุบัน -->
+            <div id="time"></div>
+            <!-- เวลาปัจจุบัน -->
+        </div>
+    </div>
+
+    <script src="script_p03.js"></script>
+    <!-- โหลด JavaScript สำหรับ Weight-Calculate -->
+</body>
+</html>

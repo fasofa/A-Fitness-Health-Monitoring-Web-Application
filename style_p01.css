@@ -1,0 +1,323 @@
+/* Username in nav-panel */
+.username-in-panel {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Delius', cursive;
+  font-size: 1em;
+  padding-top: 24px;
+  padding-bottom: 4px;
+  opacity: 0.85;
+}
+/* Navigation Panel Style */
+.nav-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 10px 10px 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.nav-panel h3 {
+  color: #e67e22;
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 1.1em;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+.nav-btn {
+  display: block;
+  width: 90%;
+  margin-bottom: 14px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  color: #222;
+  text-align: center;
+  border-radius: 8px;
+  font-family: 'Delius', cursive;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-btn:hover {
+  background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+  color: #e67e22;
+}
+/* Exercise Note Style */
+.note-exercise {
+  background: #fffbe7;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 24px 18px 18px 18px;
+  width: 90%;
+  max-width: 350px;
+  font-family: 'Delius', cursive;
+  margin: 0 auto;
+}
+.note-exercise h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.3em;
+  color: #e67e22;
+  font-family: 'Press Start 2P', system-ui;
+  letter-spacing: 1px;
+}
+.note-exercise ul {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 1em;
+}
+.note-exercise li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+*{
+    overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;   
+  background-color: #101825b2;
+}
+
+.grid-container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  
+}
+
+.grid-item {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.item-1 {
+  grid-column: 1 / 1;
+  grid-row: 1 / 4;
+  background-color: #101825;
+}
+
+.item-2 {
+  grid-column: 2 / 9;
+  grid-row: 1 / 3;
+  background-color: #101825de;
+}
+
+.item-3 {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  background-color: #fffbe7;
+}
+
+.item-4 {
+  grid-column: 4 / 7;
+  grid-row: 3 / 4;
+  background-color: #f59e0b;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 12px;
+}
+.stats-summary-container {
+  width: 100%;
+  height: 100%;
+  background: #f59e0b;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Delius', cursive;
+  color: #333;
+}
+.stats-summary-container h3 {
+  color: #fffbe7;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.0rem;
+  margin: 0 0 10px 0;
+}
+.stats-summary-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.stats-card {
+  flex: 1 1 calc(50% - 8px);
+  min-width: 0;
+  max-width: 100%;
+  background: #fff;
+  color: #333;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  font-size: 1rem;
+  line-height: 1.4;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.stats-card-left {
+  text-align: left;
+}
+.stats-card-right {
+  text-align: right;
+}
+.stats-summary-container div {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+
+.item-5 {
+  grid-column: 7 / 9;
+  grid-row: 3 / 4;
+  background-color: #101825de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* กลางแนวตั้ง */
+  align-items: center;     /* กลางแนวนอน */
+
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px 16px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px 16px;
+  }
+}
+
+
+
+.grid-item.item-2 .container {
+    display: flex; /* ใช้ flexbox */
+    width: 90dvw; /* ความกว้าง 90% ของ viewport */
+    height: 60vh; /* ความสูง 65% ของ viewport */
+}
+
+/* Panel */
+.grid-item.item-2 .panel {
+    background-size: cover; /* ขนาดพื้นหลัง */
+    background-position: center; /* ตำแหน่งพื้นหลัง */
+    background-repeat: no-repeat; /* ไม่ซ้ำพื้นหลัง */
+    height: 59vh; /* ความสูง 80% ของ viewport */
+    border-radius: 53px; /* มุมโค้ง */
+    color: white; /* สีข้อความ */
+    cursor: pointer; /* เคอร์เซอร์เป็น pointer */
+    flex: 0.5; /* flex grow */
+    margin: 10px; /* margin 10px */
+    position: relative; /* ตำแหน่งสัมพัทธ์ */
+    transition: flex 0.7s ease-in; /* แอนิเมชัน flex */
+}
+
+/* หัวข้อ h3 ใน panel */
+.grid-item.item-2 .panel h3{
+    font-family: "Press Start 2P", system-ui;
+    font-size: 24px; /* ขนาดฟอนต์ 24px */
+    position: absolute; /* ตำแหน่งสัมบูรณ์ */
+    bottom: 20px; /* ด้านล่าง 20px */
+    left: 20px; /* ด้านซ้าย 20px */
+    margin: 0; /* ไม่มี margin */
+    opacity: 0; /* โปร่งใส */
+}
+
+/* หัวข้อ h2 ใน panel */
+.grid-item.item-2 .panel h2{
+    font-size: 22px; /* ขนาดฟอนต์ 22px */
+    position: absolute; /* ตำแหน่งสัมบูรณ์ */
+    top: 25px; /* ด้านบน 25px */
+    right: 15px; /* ด้านขวา 15px */
+    left: 20px; /* ด้านซ้าย 20px */
+    margin: 0; /* ไม่มี margin */
+    opacity: 0; /* โปร่งใส */
+}
+
+/* เมื่อ panel มี class active */
+.grid-item.item-2 .panel.active {
+    flex: 5; /* flex grow 5 */
+}
+
+/* เมื่อ panel active ให้ h3 แสดง */
+.grid-item.item-2 .panel.active h3 {
+    opacity: 1; /* ไม่โปร่งใส */
+    transition: opacity 0.3s ease-in 0.4s; /* แอนิเมชัน opacity */
+}
+
+/* เมื่อ panel active ให้ h2 แสดง */
+.grid-item.item-2 .panel.active h2 {
+    opacity: 1; /* ไม่โปร่งใส */
+    transition: opacity 0.3s ease-in 0.4s; /* แอนิเมชัน opacity */
+}
+
+/* สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 480px) {
+    /* คอนเทนเนอร์ */
+    .grid-item.item-2 .container {
+        width: 100dvw; /* ความกว้างเต็ม viewport */
+    }
+
+    /* Panel ที่ 4 และ 3 จากท้าย */
+    .grid-item.item-2 .panel:nth-last-of-type(4),
+    .grid-item.item-2 .panel:nth-last-of-type(3){
+        font-size: 20px; /* ขนาดฟอนต์ 20px */
+    }
+}
+
+.grid-item.item-5 #date {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 35px; /* ขนาดฟอนต์ 20px */
+    color: rgb(255, 255, 255); /* สีข้อความ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* กลางแนวตั้ง */
+    align-items: center;
+}
+
+.grid-item.item-5 #time {
+    margin-top: 10px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 35px; /* ขนาดฟอนต์ 20px */
+    color: rgb(255, 255, 255); /* สีข้อความ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* กลางแนวตั้ง */
+    align-items: center;
+}
+
+.grid-item.item-5 .w_item-5_time {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 40px; /* ขนาดฟอนต์ 20px */
+    color: rgb(255, 255, 255); /* สีข้อความ */
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- ประกาศเอกสารเป็น HTML5 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ปรับ viewport ให้แสดงผลบนมือถือได้ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- เตรียมการเชื่อมต่อไปยัง Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Playwrite+NZ+Basic:wght@100..400&family=Press+Start+2P&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- นำเข้าแบบอักษรจาก Google Fonts -->
+
+    <link rel="stylesheet" href="style_p02.css">
+    <!-- ลิงก์ไปยังสไตล์สำหรับหน้า Todo-List -->
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <!-- layout หลักแบบ grid -->
+        <div class="grid-item item-1">
+            <div class="nav-panel">
+                <!-- เมนูด้านซ้าย -->
+                <h3>Menu</h3>
+                <a href="index_p01.html" class="nav-btn">Home</a>
+                <a href="index_p02.html" class="nav-btn">Todo-List</a>
+                <a href="index_p03.html" class="nav-btn">Weight-Calculate.</a>
+                <!-- <a href="#" class="nav-btn">ออกกำลังกาย</a> -->
+                <div class="username-in-panel">Username: <span id="username-display">YourName</span></div>
+                <!-- แสดงชื่อผู้ใช้ -->
+            </div>
+        </div>
+        <div class="grid-item item-2">
+            <div class="todo-container">
+                <!-- ส่วน main ของ Todo List -->
+                <h2>Todo List</h2>
+                <ul id="todo-list">
+                    <li><input type="checkbox" class="todo-checkbox"> <input type="text" class="todo-text" value="Pull-ups or lat pulldowns"></li>
+                    <li><input type="checkbox" class="todo-checkbox"> <input type="text" class="todo-text" value="Squats"></li>
+                    <li><input type="checkbox" class="todo-checkbox"> <input type="text" class="todo-text" value="Cable flys"></li>
+                    <li><input type="checkbox" class="todo-checkbox"> <input type="text" class="todo-text" value="Tricep pushdowns"></li>
+                    <li><input type="checkbox" class="todo-checkbox"> <input type="text" class="todo-text" value="Lateral raises"></li>
+                </ul>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                    <!-- แถบแสดงความคืบหน้า -->
+                </div>
+                <div id="progress-percent">Progress: 0%</div>
+                <!-- ข้อความเปอร์เซ็นต์ความคืบหน้า -->
+                <div class="todo-date-save">
+                    <label for="todo-date">Date:</label>
+                    <input type="date" id="todo-date" value="" />
+                    <!-- เลือกวันที่สำหรับบันทึกสถิติ -->
+                    <button id="todo-save-btn" type="button">Save</button>
+                    <!-- ปุ่มบันทึกข้อมูล -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item item-3">
+            <div class="todo-stats-container">
+                <h2>Todo-List Progress </h2>
+                <canvas id="todo-stats-chart" width="100%" height="60"></canvas>
+                <!-- แสดงกราฟสถิติความคืบหน้า -->
+            </div>
+        </div>
+        <div class="grid-item item-4">
+            <div class="todo-summary-container">
+                <h2>Todo List Summary</h2>
+                <ul id="todo-summary-list" class="todo-summary-list"></ul>
+                <!-- รายการสรุปสถิติย้อนหลัง -->
+                <button id="clear-stats-btn" class="clear-stats-btn" type="button">clear</button>
+                <!-- ปุ่มล้างสถิติ -->
+            </div>
+        </div>
+        <div class="grid-item item-5">
+            <div class="w_item-5_time">CALENDAR</div> 
+            <br>
+            <div id="date"></div>
+            <!-- วันที่ปัจจุบัน -->
+            <div id="time"></div>
+            <!-- เวลาปัจจุบัน -->
+            </div>
+    </div>
+
+    <script src="script_p02.js"></script>
+    <!-- โหลด JavaScript สำหรับหน้าฟังก์ชัน Todo-List -->
+</body>
+</html>
